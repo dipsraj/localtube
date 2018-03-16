@@ -47,7 +47,9 @@ if(!isset($_POST['videoName']) || empty($_POST['videoName']))
 <script>
     $('video').mediaelementplayer({
         startVolume:0.3,
-        startLanguage:'en'
+        startLanguage:'en',
+        defaultSeekBackwardInterval: function(media) {return (media.duration * 0.005);},
+        defaultSeekForwardInterval: function(media) {return (media.duration * 0.005);}
     });
 </script>
 </body>
