@@ -1,6 +1,9 @@
 # LocalTube
 A Local Video Server for all your devices connected to same network
 
+## Pre-Requisite
+1. Local server ( e.g: Apache)
+
 ## Installation
 ```javascript
 git clone git@github.com:dipsraj/localtube.git
