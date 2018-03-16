@@ -2,7 +2,7 @@
 A Local Video Server for all your devices connected to same network
 
 ## Pre-Requisite
-1. Local server ( e.g: Apache)
+1. Local server ( e.g: apache , nginx)
 
 ## Installation
 ```javascript
