@@ -1,6 +1,6 @@
 <?php
 if(!isset($_POST['videoName']) || empty($_POST['videoName']))
-    header('Location: box-office.html');
+    header('Location: box-office');
 ?>
 <!doctype html>
 <html lang="en">
@@ -18,17 +18,17 @@ if(!isset($_POST['videoName']) || empty($_POST['videoName']))
 </head>
 <body>
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <a class="navbar-brand" href="index.html">LocalTube</a>
+    <a class="navbar-brand" href="home">LocalTube</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="box-office.html">BoxOffice</a>
+                <a class="nav-link" href="box-office">BoxOffice</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="about">About</a>
             </li>
         </ul>
     </div>

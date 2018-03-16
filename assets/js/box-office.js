@@ -16,7 +16,7 @@ function callTheatre(id) {
     var videoName = $("#"+id).html();
     videoName = videoName.substr(0,videoName.lastIndexOf('.'));
     $(
-        '<form action="theatre.php" method="post">' +
+        '<form action="theatre" method="post">' +
             '<input type="hidden" name="videoName" value="'+videoName+'">'+
         '</form>'
     ).appendTo('body').submit();
