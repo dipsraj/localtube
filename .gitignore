@@ -1,0 +1,7 @@
+# dependencies
+/node_modules
+
+.idea/*
+
+videos/*
+!videos/.gitignore
