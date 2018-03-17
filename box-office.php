@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="assets/vendor/jquery-3.2.1.slim.min.js"></script>
+    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/jquery-ui.css">
+    <script src="assets/vendor/jquery.min.js"></script>
     <script src="assets/vendor/popper.min.js"></script>
     <script src="assets/vendor/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
     <script src="assets/vendor/axios.min.js"></script>
     <title>Box Office - LocalTube</title>
 </head>
@@ -34,6 +35,18 @@
     </div>
 </div>
 <div class="container">
+    <form action="theatre" method="post">
+        <div class="form-group ui-widget">
+            <div class="input-group">
+                <input type="text" class="form-control" id="video" name="videoName" placeholder="Search Video">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit">Watch</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="container">
     <div class="table-responsive">
         <table class="table table-dark table-hover">
             <thead>
@@ -47,6 +60,7 @@
         </table>
     </div>
 </div>
+<script src="assets/vendor/jquery-ui.js"></script>
 <script src="assets/js/box-office.js"></script>
 </body>
 </html>

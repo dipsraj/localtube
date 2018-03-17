@@ -4,17 +4,25 @@ $(function () {
         method:'post'
     }).then(function (response){
         var file_names = response.data;
+        var searchArray = [];
         var tbody = "";
         file_names.forEach(function (trow,key) {
-            tbody = tbody + "<tr><td>"+(++key)+"</td><td id='"+(key)+"'>"+trow.name+"</td><td><button type=\"button\" class=\"btn btn-info\" onclick='callTheatre("+key+")'>Watch</button></td></tr>"
+            var videoName = trow.name;
+            videoName = videoName.substr(0,videoName.lastIndexOf('.'));
+            tbody = tbody + "<tr><td>"+(++key)+"</td><td id='"+(key)+"'>"+videoName+"</td><td><button type=\"button\" class=\"btn btn-info\" onclick='callTheatre("+key+")'>Watch</button></td></tr>"
+            searchArray[key-1] = videoName;
         });
         $('tbody').append(tbody);
+
+        $("#video").autocomplete({
+            source: searchArray
+        });
+
     });
 });
 
 function callTheatre(id) {
     var videoName = $("#"+id).html();
-    videoName = videoName.substr(0,videoName.lastIndexOf('.'));
     $(
         '<form action="theatre" method="post">' +
             '<input type="hidden" name="videoName" value="'+videoName+'">'+
