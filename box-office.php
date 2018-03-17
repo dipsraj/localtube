@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" href="">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,6 +12,14 @@
     <script src="assets/vendor/bootstrap.min.js"></script>
     <script src="assets/vendor/axios.min.js"></script>
     <title>Box Office - LocalTube</title>
+    <style>
+        .table-container.is-hidden{
+            display: none;
+        }
+        .table-container{
+            display: block;
+        }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -34,30 +43,29 @@
         <h1>Box Office - Localtube</h1>
     </div>
 </div>
-<div class="container">
-    <form action="theatre" method="post">
-        <div class="form-group ui-widget">
-            <div class="input-group">
-                <input type="text" class="form-control" id="video" name="videoName" placeholder="Search Video">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="submit">Watch</button>
+<div class="container" id="main-container">
+    <div class="table-container is-hidden" id="table-container">
+        <form action="theatre" method="post">
+            <div class="form-group ui-widget">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="video" name="fullVideoName" placeholder="Search Video">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit">Watch</button>
+                    </div>
                 </div>
             </div>
+        </form>
+        <div class="table-responsive" >
+            <table class="table table-dark table-hover">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
         </div>
-    </form>
-</div>
-<div class="container">
-    <div class="table-responsive">
-        <table class="table table-dark table-hover">
-            <thead>
-            <tr>
-                <th>SL No.</th>
-                <th>Name</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
     </div>
 </div>
 <script src="assets/vendor/jquery-ui.js"></script>
